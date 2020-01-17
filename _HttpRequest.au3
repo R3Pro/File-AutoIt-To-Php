@@ -120,10 +120,6 @@ Global $dll_WinInet
 OnAutoItExitRegister('__HttpRequest_CloseAll')
 __HttpRequest_CancelReadWrite()
 
-
-;_HttpRequest_SetAuthorization('maabed','Dell0224020019')
-;$Data_  = _HttpRequest(2, 'https://www.r3-tools.com/Pro/check_ID.php','hash=5028')
-;MsgBox(0,'',_PHP_POST('http://www.r3-tools.com/Pro/check_ID.php','hash=5028','maabed','Dell0224020019'))
 Func _PHP_POST($pag, $sPD,$user = '',$pass = '',$mode = 2)
 	If $user <> '' Then _HttpRequest_SetAuthorization($user,$pass)
 	Return _HttpRequest($mode,$pag,$sPD)
